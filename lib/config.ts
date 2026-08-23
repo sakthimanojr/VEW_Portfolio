@@ -1,9 +1,9 @@
 // Central site configuration. Non-secret, safe for client use.
 export const siteConfig = {
-  name: 'Vinayaga Engineering Works',
+  name: 'Vinayaga Steels',
   tagline: 'Built Strong. Crafted Right.',
   description:
-    'Vinayaga Engineering Works provides industrial, commercial and residential fabrication solutions in Coimbatore and nearby districts. 10+ years of experience and 500+ completed projects.',
+    'Vinayaga Steels provides industrial, commercial and residential fabrication solutions in Coimbatore and nearby districts. 10+ years of experience and 500+ completed projects.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vinayagaengineeringworks.com',
   address: {
     line1: 'Kavundampalayam',
@@ -42,12 +42,12 @@ export const whatsappHref = (message?: string) => {
 };
 
 export const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Our Work', href: '/our-work' },
-  { label: 'Why Us', href: '/#why-us' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Our Work', href: '#our-work' },
+  { label: 'Why Us', href: '#why-us' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export type ServiceCategoryDef = {

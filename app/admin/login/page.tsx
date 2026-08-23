@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase/client';
+import { siteConfig } from '@/lib/config';
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -35,12 +36,12 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 flex flex-col items-center text-center">
           <span className="mb-4 flex h-12 w-12 items-center justify-center rounded bg-primary text-base font-black text-white">
-            VEW
+            {siteConfig.name.split(' ').map(w => w[0]).join('')}
           </span>
           <h1 className="font-display text-xl font-bold uppercase tracking-tight text-white">
             Admin Login
           </h1>
-          <p className="mt-1 text-sm text-white/50">Vinayaga Engineering Works</p>
+          <p className="mt-1 text-sm text-white/50">{siteConfig.name}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 rounded-xl bg-white p-7">

@@ -1,10 +1,10 @@
-import { whatsappHref } from '@/lib/config';
+import { whatsappHref, siteConfig } from '@/lib/config';
 
 export default function WhatsAppButton({
   variant = 'primary',
   className = '',
   label = 'WhatsApp Us',
-  message = "Hi Vinayaga Engineering Works, I'd like to discuss a fabrication requirement.",
+  message = `Hi ${siteConfig.name}, I'd like to discuss a fabrication requirement.`,
 }: {
   variant?: 'primary' | 'outline' | 'dark';
   className?: string;

@@ -1,9 +1,9 @@
-import { whatsappHref } from '@/lib/config';
+import { whatsappHref, siteConfig } from '@/lib/config';
 
 export default function FloatingWhatsApp() {
   return (
     <a
-      href={whatsappHref("Hi Vinayaga Engineering Works, I'd like to discuss a fabrication requirement.")}
+      href={whatsappHref(`Hi ${siteConfig.name}, I'd like to discuss a fabrication requirement.`)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"

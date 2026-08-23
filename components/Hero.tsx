@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { siteConfig } from '@/lib/config';
 
 export default function Hero({ heroImage: _heroImage }: { heroImage: unknown }) {
@@ -37,39 +36,38 @@ export default function Hero({ heroImage: _heroImage }: { heroImage: unknown }) 
         aria-hidden="true"
       />
 
-
       {/* ── Hero content ── */}
       <div className="container-edge relative flex flex-col items-center py-28 md:py-40 lg:py-52 text-center">
         <div className="animate-fadeUp max-w-3xl">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-primary-light/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-primary-light backdrop-blur-sm">
             Fabrication · Coimbatore
           </p>
-          <h1 className="font-display text-4xl font-black uppercase leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl">
+          <h1 className="font-display text-3xl font-black uppercase leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-7xl">
             We Build
             <br />
             With <span className="text-primary-light">Strength.</span>
           </h1>
-          <p className="mt-6 mx-auto max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+          <p className="mt-6 mx-auto max-w-xl text-sm leading-relaxed text-white/70 sm:text-lg">
             Industrial, commercial and residential fabrication solutions — from structural steel
             and sheds to custom fabrication, pergolas and rooftop sit-outs.
           </p>
-          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.15em] text-white/80">
+          <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-white/80 sm:text-sm">
             {siteConfig.stats.years} Years Experience &nbsp;•&nbsp; {siteConfig.stats.projects} Projects Completed
           </p>
 
           <div className="mt-10 flex flex-col gap-3.5 items-center sm:flex-row sm:justify-center">
-            <Link
-              href="/our-work"
+            <a
+              href="#our-work"
               className="inline-flex min-h-[52px] items-center justify-center rounded-lg bg-primary px-9 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-all hover:bg-primary-light hover:shadow-primary/50 sm:text-base"
             >
               Explore Our Work
-            </Link>
-            <Link
-              href="/contact"
+            </a>
+            <a
+              href="#contact"
               className="inline-flex min-h-[52px] items-center justify-center rounded-lg border-2 border-white/30 px-9 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white hover:bg-white/10 sm:text-base"
             >
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       </div>

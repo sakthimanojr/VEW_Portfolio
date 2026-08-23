@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { navLinks, serviceCategories, siteConfig, telHref, mailHref, whatsappHref } from '@/lib/config';
+import { navLinks, serviceCategories, siteConfig, telHref, mailHref } from '@/lib/config';
 
 export default function Footer() {
   return (
@@ -8,10 +7,10 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="mb-4 flex items-center gap-2.5">
             <span className="flex h-9 w-9 items-center justify-center rounded bg-primary text-sm font-black text-white">
-              VEW
+              {siteConfig.name.split(' ').map(w => w[0]).join('')}
             </span>
             <span className="font-display text-base font-bold uppercase tracking-wide text-white">
-              Vinayaga Engineering Works
+              {siteConfig.name}
             </span>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-white/60">
@@ -54,9 +53,9 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-white">
+                <a href={l.href} className="transition-colors hover:text-white">
                   {l.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -67,9 +66,9 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {serviceCategories.map((c) => (
               <li key={c.slug}>
-                <Link href={`/our-work/${c.slug}`} className="transition-colors hover:text-white">
+                <a href="#services" className="transition-colors hover:text-white">
                   {c.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

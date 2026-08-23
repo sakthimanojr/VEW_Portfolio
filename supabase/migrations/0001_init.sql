@@ -4,10 +4,17 @@
 create extension if not exists "pgcrypto";
 
 -- ─────────────────────────────────────────────
+-- Drop existing tables (safe re-run)
+-- ─────────────────────────────────────────────
+
+drop table if exists public.gallery_images cascade;
+drop table if exists public.gallery_categories cascade;
+
+-- ─────────────────────────────────────────────
 -- Tables
 -- ─────────────────────────────────────────────
 
-create table if not exists public.gallery_categories (
+create table public.gallery_categories (
   id uuid primary key default gen_random_uuid(),
   name text not null,
   slug text not null unique,
@@ -17,7 +24,7 @@ create table if not exists public.gallery_categories (
   created_at timestamptz not null default now()
 );
 
-create table if not exists public.gallery_images (
+create table public.gallery_images (
   id uuid primary key default gen_random_uuid(),
   category_id uuid not null references public.gallery_categories (id) on delete cascade,
   cloudinary_public_id text not null,
