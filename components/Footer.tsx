@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { navLinks, serviceCategories, siteConfig, telHref, mailHref } from '@/lib/config';
 
 export default function Footer() {
@@ -115,9 +116,17 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-6">
-        <p className="container-edge text-center text-xs text-white/40">
-          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-        </p>
+        <div className="container-edge flex flex-col items-center justify-between gap-4 sm:flex-row text-xs text-white/40">
+          <p>
+            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          </p>
+          <Link
+            href="/admin/login"
+            className="rounded border border-white/15 px-3 py-1.5 hover:border-white hover:text-white transition-colors"
+          >
+            Admin Login
+          </Link>
+        </div>
       </div>
     </footer>
   );
