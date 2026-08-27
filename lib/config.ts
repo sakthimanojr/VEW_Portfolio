@@ -1,9 +1,9 @@
 // Central site configuration. Non-secret, safe for client use.
 export const siteConfig = {
-  name: 'Vinayaga Steels',
+  name: 'Vinayaga Engineering Works',
   tagline: 'Built Strong. Crafted Right.',
   description:
-    'Vinayaga Steels provides industrial, commercial and residential fabrication solutions in Coimbatore and nearby districts. 10+ years of experience and 500+ completed projects.',
+    'Vinayaga Engineering Works provides industrial, commercial and residential fabrication solutions in Coimbatore and nearby districts. 10+ years of experience and 500+ completed projects.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vinayagaengineeringworks.com',
   address: {
     line1: 'Kavundampalayam',
